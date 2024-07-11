@@ -1,0 +1,31 @@
+const productService = require("../services/product.service");
+
+const getProducts = async (req, res) => {
+  const products = await productService.getProducts();
+  return res.status(200).json(products);
+};
+
+const insertProduct = async (req, res) => {
+  const { id } = req.payload;
+  const newProduct = await productService.insertProduct(req.body, id);
+  return res.status(201).json(newProduct);
+};
+
+const updateProduct = async (req, res) => {
+  const { id } = req.params;
+  const updatedProduct = await productService.updateProduct(req.body, id);
+  return res.status(200).json(updatedProduct);
+};
+
+const deleteProduct = async (req, res) => {
+  const { id } = req.params;
+  await productService.deleteProduct(id);
+  return res.status(202).json({ message: 'Deleted!' });
+};
+
+module.exports = {
+  getProducts,
+  insertProduct,
+  deleteProduct,
+  updateProduct,
+};
