@@ -8,6 +8,7 @@ const userRouter = Router();
 userRouter.post('/login', loginValidation, userController.login);
 userRouter.post('/register', registerValidation, userController.register);
 userRouter.get('/user', tokenValidation, userController.getUser);
+userRouter.get('/users', tokenValidation, userController.getUsers);
 // userRouter.put('/change-mode', tokenValidation, userController.changeMode);
 
 module.exports = { userRouter };

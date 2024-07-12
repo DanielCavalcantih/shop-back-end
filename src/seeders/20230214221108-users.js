@@ -11,6 +11,11 @@ module.exports = {
           email: "danielcavalcanti8000@gmail.com",
           password: "daniel123",
         },
+        {
+          name: "Isadora Maiara",
+          email: "isadoramaiara@gmail.com",
+          password: "isadoral123",
+        },
       ],
       {}
     );

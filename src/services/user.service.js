@@ -32,4 +32,9 @@ const getUser = async (id) => {
   return user;
 };
 
-module.exports = { login, register, getUser };
+const getUsers = async () => {
+  const user = await User.findAll();
+  return user;
+};
+
+module.exports = { login, register, getUser, getUsers };

@@ -1,4 +1,10 @@
+const { where } = require("sequelize");
 const { Product } = require("../models");
+
+const getMyProducts = async (id) => {
+  const products = await Product.findAll({ where: { user_id: id } });
+  return products;
+};
 
 const getProducts = async () => {
   const products = await Product.findAll();
@@ -7,6 +13,7 @@ const getProducts = async () => {
 
 const insertProduct = async (product, id) => {
   const newProduct = {
+    user_id: id,
     ...product,
   };
   const createdProduct = await Product.create(newProduct);
@@ -27,6 +34,7 @@ const deleteProduct = async (id) => {
 };
 
 module.exports = {
+  getMyProducts,
   getProducts,
   insertProduct,
   deleteProduct,
