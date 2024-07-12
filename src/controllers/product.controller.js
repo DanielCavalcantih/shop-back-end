@@ -1,5 +1,11 @@
 const productService = require("../services/product.service");
 
+const getMyProducts = async (req, res) => {
+  const { id } = req.payload;
+  const products = await productService.getMyProducts(id);
+  return res.status(200).json(products);
+};
+
 const getProducts = async (req, res) => {
   const products = await productService.getProducts();
   return res.status(200).json(products);
@@ -24,6 +30,7 @@ const deleteProduct = async (req, res) => {
 };
 
 module.exports = {
+  getMyProducts,
   getProducts,
   insertProduct,
   deleteProduct,

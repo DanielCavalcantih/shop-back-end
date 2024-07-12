@@ -5,6 +5,7 @@ const productController = require("../controllers/product.controller");
 
 const productRouter = Router();
 
+productRouter.get("/my-products", tokenValidation, productController.getMyProducts);
 productRouter.get("/products", tokenValidation, productController.getProducts);
 productRouter.post(
   "/products",
