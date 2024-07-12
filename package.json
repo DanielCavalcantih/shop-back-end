@@ -2,7 +2,7 @@
   "name": "shop-back-end",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js",
     "db:reset": "npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all",
