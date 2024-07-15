@@ -21,7 +21,7 @@ const register = async (newUser) => {
       ...newUser,
     };
     await User.create(body);
-    return { message: "Registrado com sucesso!" };
+    return { message: "Usuário cadastrado com sucesso!" };
   }
 };
 
