@@ -28,7 +28,7 @@ Dependências do projeto back-end:<br />
   — joi;<br />
   — jsonwebtoken;<br />
 
-  joi: Utilizada para validar campos enviados no corpo da requisição, gerando erros mais específicos;
+  joi: Utilizada para validar campos enviados no corpo da requisição, gerando erros mais específicos;<br />
   lucide-react: Uma biblioteca utilizadar para autenticação de usuário. Geramos um token ao logar na aplicação, este token, podemos passa-lo no header da requisição, para passar por uma validação (se é um token válido), retornando para nós a informações do usuário logado;
 
   ### Link para o repositório [FRONT-END](https://github.com/DanielCavalcantih/shop-front-end)
